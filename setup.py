@@ -9,7 +9,7 @@ from distutils.core import setup
 setup(
   name = 'modeltracker6',         # How you named your package folder (MyLib)
   packages = ['modeltracker6'],   # Chose the same as "name"
-  version = 'v_1',      # Start with a small number and increase it with every change you make
+  version = 'v_2',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'Model Tracker',   # Give a short description about your library
   author = 'Miracle',                   # Type in your name
