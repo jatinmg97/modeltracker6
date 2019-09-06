@@ -456,11 +456,11 @@ def csv(aaa):
     return Model_Table
 
 class data:
-    def __init__(self,path):
-        self.path=path
+    def __init__(self,path2):
+        self.path2=path2
     
     def save(self):
-        path=self.path
+        path2=self.path2
         PK={}
 
         Data_Table = pd.DataFrame(columns=['Data_Name','Data_ID'])
@@ -469,14 +469,14 @@ class data:
         else:
             Data_Table=pd.read_csv('Data_Table.csv')
         #aaa2=(Data_Table.Data_Name=='name').all()  #name
-        A=Data_Table[Data_Table['Data_Name'].astype(str).str[:].str.contains(path)]
+        A=Data_Table[Data_Table['Data_Name'].astype(str).str[:].str.contains(path2)]
            
         b=A.empty
         ID=A['Data_ID']     
     
         if b==True:
             PK={}
-            PK[path] = uuid.uuid4()
+            PK[path2] = uuid.uuid4()
             PK2=pd.DataFrame.from_dict(PK, orient='index')
           
             PK2 = PK2.reset_index()
